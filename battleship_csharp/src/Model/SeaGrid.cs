@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System;
+
 /// <summary>
 /// The SeaGrid is the grid upon which the ships are deployed.
 /// </summary>
@@ -6,7 +9,6 @@
 /// grid. This can be used in conjuncture with the SeaGridAdapter to 
 /// mask the position of the ships.
 /// </remarks>
-
 public class SeaGrid : ISeaGrid
 {
 
@@ -20,7 +22,7 @@ public class SeaGrid : ISeaGrid
 	/// <summary>
 	/// The sea grid has changed and should be redrawn.
 	/// </summary>
-	event EventHandler ISeaGrid.Changed;
+	event EventHandler Changed;
 
 	/// <summary>
 	/// The width of the sea grid.
@@ -53,7 +55,7 @@ public class SeaGrid : ISeaGrid
 	/// <param name="x">x coordinate of the tile</param>
 	/// <param name="y">y coordiante of the tile</param>
 	/// <returns></returns>
-	public TileView ISeaGrid.Item {
+	public TileView Item {
 		get { return _GameTiles(x, y).View; }
 	}
 
@@ -159,7 +161,7 @@ public class SeaGrid : ISeaGrid
 	/// <param name="row">the row at which is being shot</param>
 	/// <param name="col">the cloumn at which is being shot</param>
 	/// <returns>An attackresult (hit, miss, sunk, shotalready)</returns>
-	public AttackResult ISeaGrid.HitTile(int row, int col)
+	public AttackResult HitTile(int row, int col)
 	{
 		try {
 			//tile is already hit

@@ -1,5 +1,7 @@
 using System.IO;
 using SwinGameSDK;
+using System;
+using System.Collections.Generic;
 
 /// <summary>
 /// Controls displaying and collecting high score data.
@@ -26,7 +28,7 @@ class HighScoreController
 		/// </summary>
 		/// <param name="obj">the object to compare to</param>
 		/// <returns>a value that indicates the sort order</returns>
-		public int System.IComparable.CompareTo(object obj)
+		public int CompareTo(object obj)
 		{
 			if (obj is Score) {
 				Score other = (Score)obj;
