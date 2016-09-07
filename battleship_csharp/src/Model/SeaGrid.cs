@@ -7,6 +7,9 @@
 /// mask the position of the ships.
 /// </remarks>
 
+using System;
+using System.Collections.Generic;
+
 public class SeaGrid : ISeaGrid
 {
 
@@ -21,7 +24,6 @@ public class SeaGrid : ISeaGrid
 	/// The sea grid has changed and should be redrawn.
 	/// </summary>
 	event EventHandler ISeaGrid.Changed;
-
 	/// <summary>
 	/// The width of the sea grid.
 	/// </summary>
@@ -53,7 +55,7 @@ public class SeaGrid : ISeaGrid
 	/// <param name="x">x coordinate of the tile</param>
 	/// <param name="y">y coordiante of the tile</param>
 	/// <returns></returns>
-	public TileView ISeaGrid.Item {
+	TileView ISeaGrid.Item {
 		get { return _GameTiles(x, y).View; }
 	}
 

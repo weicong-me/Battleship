@@ -2,16 +2,13 @@
 /// The ISeaGrid defines the read only interface of a Grid. This
 /// allows each player to see and attack their opponents grid.
 /// </summary>
-
 using System;
 
 public interface ISeaGrid
 {
+	int Width { get;}
 
-
-	int Width { get; }
-
-	int Height { get; }
+	int Height { get;}
 	/// <summary>
 	/// Indicates that the grid has changed.
 	/// </summary>
