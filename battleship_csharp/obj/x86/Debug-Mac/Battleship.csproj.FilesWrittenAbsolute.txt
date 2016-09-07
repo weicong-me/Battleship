@@ -1,2 +1,0 @@
-/Users/Weicong/Downloads/Battleship/obj/x86/Debug-Mac/.NETFramework,Version=v4.0.AssemblyAttribute.cs
-/Users/Weicong/Downloads/Battleship/bin/Debug/SwinGame.dll
