@@ -1,0 +1,8 @@
+﻿<Properties StartupItem="MyGame.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Unix|x86" />
+  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
