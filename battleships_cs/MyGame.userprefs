@@ -2,8 +2,10 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Unix|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="src/MenuController.cs">
     <Files>
-      <File FileName="src/MenuController.cs" Line="121" Column="41" />
+      <File FileName="src/MenuController.cs" Line="205" Column="50" />
       <File FileName="src/DeploymentController.cs" Line="103" Column="72" />
+      <File FileName="src/Model/Player.cs" Line="97" Column="24" />
+      <File FileName="src/Model/SeaGrid.cs" Line="129" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
