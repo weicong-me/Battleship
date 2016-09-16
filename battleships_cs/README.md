@@ -19,7 +19,7 @@ To get started:
 Copy the "Resources" folder (from the root directory of the Git project) to "battleships_cs/bin/Debug/".
 
 ### macOS users
-Copy the "Resources" folder (from the root directory of the Git project) to "battleships_cs/bin/Debug/MyGame.app/"
+Copy the "Resources" folder (from the root directory of the Git project) to "battleships_cs/bin/Debug/ProjectTemplate.app/Contents/"
 
 ### Windows users
 The procedure should be the same as in Linux, though I have not tested this yet.
