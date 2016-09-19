@@ -1,12 +1,13 @@
 ﻿<Properties StartupConfiguration="{871B5A90-103A-46A5-BBB9-07C02B9851D1}|Default">
   <MonoDevelop.Ide.ItemProperties.MyGame PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/DeploymentController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/GameLogic.cs">
     <Files>
       <File FileName="src/MenuController.cs" Line="1" Column="1" />
       <File FileName="src/DeploymentController.cs" Line="104" Column="72" />
       <File FileName="src/Model/Player.cs" Line="1" Column="1" />
       <File FileName="src/Model/SeaGrid.cs" Line="1" Column="1" />
       <File FileName="src/DiscoveryController.cs" Line="1" Column="1" />
+      <File FileName="src/GameLogic.cs" Line="14" Column="44" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Unix|x86" />
