@@ -1,0 +1,6 @@
+/Users/Weicong/Downloads/Battleship/battleships_cs/obj/x86/Debug-Unix/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/Users/Weicong/Downloads/Battleship/battleships_cs/bin/Debug/MyGame.exe.mdb
+/Users/Weicong/Downloads/Battleship/battleships_cs/bin/Debug/MyGame.exe
+/Users/Weicong/Downloads/Battleship/battleships_cs/obj/x86/Debug-Unix/MyGame.exe
+/Users/Weicong/Downloads/Battleship/battleships_cs/obj/x86/Debug-Unix/MyGame.exe.mdb
+/Users/Weicong/Downloads/Battleship/battleships_cs/bin/Debug/SwinGame.dll
