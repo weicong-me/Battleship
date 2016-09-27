@@ -3,10 +3,12 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="src/DeploymentController.cs">
     <Files>
       <File FileName="src/MenuController.cs" Line="1" Column="1" />
-      <File FileName="src/DeploymentController.cs" Line="104" Column="72" />
+      <File FileName="src/DeploymentController.cs" Line="1" Column="1" />
       <File FileName="src/Model/Player.cs" Line="1" Column="1" />
       <File FileName="src/Model/SeaGrid.cs" Line="1" Column="1" />
       <File FileName="src/DiscoveryController.cs" Line="1" Column="1" />
+      <File FileName="src/UtilityFunctions.cs" Line="1" Column="1" />
+      <File FileName="src/GameLogic.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
