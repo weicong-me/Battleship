@@ -74,6 +74,7 @@ public static class GameController
 		//Create the game
 		_theGame = new BattleShipsGame();
 
+		Console.WriteLine ("AI-SETTING" + _aiSetting);
 		//create the players
 		switch (_aiSetting) {
 			case AIOption.Medium:
@@ -83,7 +84,7 @@ public static class GameController
 				_ai = new AIHardPlayer(_theGame);
 				break;
 			default:
-				_ai = new AIHardPlayer(_theGame);
+				_ai = new AIMediumPlayer (_theGame);
 				break;
 		}
 

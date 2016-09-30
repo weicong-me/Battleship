@@ -1,18 +1,25 @@
-﻿<Properties StartupConfiguration="{871B5A90-103A-46A5-BBB9-07C02B9851D1}|Default">
+﻿<Properties StartupItem="MyGame.csproj" StartupConfiguration="{871B5A90-103A-46A5-BBB9-07C02B9851D1}|Default">
   <MonoDevelop.Ide.ItemProperties.MyGame PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/EndingGameController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/MenuController.cs">
     <Files>
-      <File FileName="src/MenuController.cs" Line="1" Column="1" />
+      <File FileName="src/MenuController.cs" Line="293" Column="45" />
       <File FileName="src/DeploymentController.cs" Line="104" Column="72" />
       <File FileName="src/Model/Player.cs" Line="1" Column="1" />
       <File FileName="src/Model/SeaGrid.cs" Line="1" Column="1" />
       <File FileName="src/DiscoveryController.cs" Line="1" Column="1" />
-      <File FileName="src/GameLogic.cs" Line="14" Column="66" />
+      <File FileName="src/GameLogic.cs" Line="14" Column="96" />
       <File FileName="src/UtilityFunctions.cs" Line="1" Column="1" />
       <File FileName="src/EndingGameController.cs" Line="1" Column="1" />
+      <File FileName="src/Model/AIHardPlayer.cs" Line="1" Column="1" />
+      <File FileName="src/Model/AIMediumPlayer.cs" Line="1" Column="1" />
+      <File FileName="src/GameController.cs" Line="383" Column="48" />
+      <File FileName="src/Model/AIOption.cs" Line="35" Column="1" />
+      <File FileName="src/Model/AIPlayer.cs" Line="1" Column="1" />
+      <File FileName="src/Model/BattleShipsGame.cs" Line="1" Column="1" />
+      <File FileName="src/Model/TileView.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Unix|x86" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Mac|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
