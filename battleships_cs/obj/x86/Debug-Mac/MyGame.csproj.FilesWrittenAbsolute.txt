@@ -4,3 +4,4 @@
 /Users/100055958/Documents/Macbook-repair-period/Battleship/battleships_cs/obj/x86/Debug-Mac/MyGame.exe
 /Users/100055958/Documents/Macbook-repair-period/Battleship/battleships_cs/obj/x86/Debug-Mac/MyGame.exe.mdb
 /Users/100055958/Documents/Macbook-repair-period/Battleship/battleships_cs/bin/Debug/SwinGame.dll
+/Users/100055958/Documents/Macbook-repair-period/Battleship/battleships_cs/bin/Debug/nunit.framework.dll

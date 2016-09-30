@@ -8,6 +8,10 @@ namespace Application
 		[Test()]
 		public void TestCase()
 		{
+			GameController.StartGame ();
+			AIOption expected__aiSetting = AIOption.Medium;
+			AIOption actual__aiSetting = GameController._aiSetting;
+			Assert.AreEqual (expected__aiSetting, actual__aiSetting);
 		}
 	}
 }
