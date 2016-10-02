@@ -2,26 +2,14 @@
   <MonoDevelop.Ide.ItemProperties.MyGame PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="src/UnitTest/NUnitTest_AI.cs">
     <Files>
-      <File FileName="src/MenuController.cs" Line="291" Column="3" NotebookId="1" />
-      <File FileName="src/DeploymentController.cs" Line="104" Column="72" NotebookId="1" />
-      <File FileName="src/Model/Player.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="src/Model/SeaGrid.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="src/DiscoveryController.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="src/GameLogic.cs" Line="14" Column="96" NotebookId="1" />
-      <File FileName="src/UtilityFunctions.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="src/EndingGameController.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="src/Model/AIHardPlayer.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="src/Model/AIMediumPlayer.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="src/GameController.cs" Line="26" Column="15" NotebookId="1" />
-      <File FileName="src/Model/AIOption.cs" Line="35" Column="1" NotebookId="1" />
-      <File FileName="src/Model/AIPlayer.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="src/Model/BattleShipsGame.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="src/Model/BattleShipsGame.cs" Line="30" Column="16" NotebookId="1" />
       <File FileName="src/Model/TileView.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="src/GameController.cs" Line="6" Column="21" NotebookId="1" />
     </Files>
     <FloatingWindows>
-      <FloatingWindow WindowId="1" X="759" Y="126" Width="640" Height="480">
+      <FloatingWindow WindowId="1" X="752" Y="869" Width="640" Height="480">
         <Files>
-          <File FileName="src/UnitTest/NUnitTest_AI.cs" Line="14" Column="4" />
+          <File FileName="src/UnitTest/NUnitTest_AI.cs" Line="19" Column="1" />
         </Files>
       </FloatingWindow>
     </FloatingWindows>
