@@ -13,6 +13,11 @@ using SwinGameSDK;
 /// </summary>
 static class DeploymentController
 {
+	private const int MENU_TOP = 0;
+	private const int MENU_LEFT = 0;
+	private const int MENU_HEIGHT = 62;
+	private const int MENU_WIDTH = 55;
+
 	private const int SHIPS_TOP = 98;
 	private const int SHIPS_LEFT = 20;
 	private const int SHIPS_HEIGHT = 90;
@@ -37,6 +42,40 @@ static class DeploymentController
 	private static Direction _currentDirection = Direction.UpDown;
 
 	private static ShipName _selectedShip = ShipName.Tug;
+
+	/// <summary>
+	/// The user has clicked somewhere on the screen, check if its is a deployment and deploy
+	/// the current ship if that is the case.
+	/// </summary>
+	/// <remarks>
+	/// If the click is in the grid it deploys to the selected location
+	/// with the indicated direction
+	/// </remarks>
+	private static void DoDeployClick ()
+	{
+		Point2D mouse = default (Point2D);
+
+		mouse = SwinGame.MousePosition ();
+
+		//Calculate the row/col clicked
+		int row = 0;
+		int col = 0;
+		row = Convert.ToInt32 (Math.Floor ((mouse.Y - UtilityFunctions.FIELD_TOP) / (UtilityFunctions.CELL_HEIGHT + UtilityFunctions.CELL_GAP)));
+		col = Convert.ToInt32 (Math.Floor ((mouse.X - UtilityFunctions.FIELD_LEFT) / (UtilityFunctions.CELL_WIDTH + UtilityFunctions.CELL_GAP)));
+
+		if (row >= 0 & row < GameController.HumanPlayer.PlayerGrid.Height) {
+			if (col >= 0 & col < GameController.HumanPlayer.PlayerGrid.Width) {
+				//if in the area try to deploy
+				try {
+					GameController.HumanPlayer.PlayerGrid.MoveShip (row, col, _selectedShip, _currentDirection);
+				} catch (Exception ex) {
+					Audio.PlaySoundEffect (GameResources.GameSound ("Error"));
+					UtilityFunctions.Message = ex.Message;
+				}
+			}
+		}
+	}
+
 	/// <summary>
 	/// Handles user input for the Deployment phase of the game.
 	/// </summary>
@@ -49,6 +88,9 @@ static class DeploymentController
 	{
 		if (SwinGame.KeyTyped(KeyCode.vk_ESCAPE)) {
 			GameController.AddNewState(GameState.ViewingGameMenu);
+		}
+		else if (SwinGame.MouseClicked (MouseButton.LeftButton) & UtilityFunctions.IsMouseInRectangle (MENU_LEFT, MENU_TOP, MENU_WIDTH, MENU_WIDTH)) {
+			GameController.AddNewState (GameState.ViewingGameMenu);
 		}
 
 		if (SwinGame.KeyTyped(KeyCode.vk_UP) | SwinGame.KeyTyped(KeyCode.vk_DOWN)) {
@@ -74,44 +116,11 @@ static class DeploymentController
 			if (GameController.HumanPlayer.ReadyToDeploy & UtilityFunctions.IsMouseInRectangle(PLAY_BUTTON_LEFT, TOP_BUTTONS_TOP, PLAY_BUTTON_WIDTH, TOP_BUTTONS_HEIGHT)) {
 				GameController.EndDeployment();
 			} else if (UtilityFunctions.IsMouseInRectangle(UP_DOWN_BUTTON_LEFT, TOP_BUTTONS_TOP, DIR_BUTTONS_WIDTH, TOP_BUTTONS_HEIGHT)) {
-				_currentDirection = Direction.LeftRight;
+				_currentDirection = Direction.UpDown;
 			} else if (UtilityFunctions.IsMouseInRectangle(LEFT_RIGHT_BUTTON_LEFT, TOP_BUTTONS_TOP, DIR_BUTTONS_WIDTH, TOP_BUTTONS_HEIGHT)) {
 				_currentDirection = Direction.LeftRight;
 			} else if (UtilityFunctions.IsMouseInRectangle(RANDOM_BUTTON_LEFT, TOP_BUTTONS_TOP, RANDOM_BUTTON_WIDTH, TOP_BUTTONS_HEIGHT)) {
 				GameController.HumanPlayer.RandomizeDeployment();
-			}
-		}
-	}
-
-	/// <summary>
-	/// The user has clicked somewhere on the screen, check if its is a deployment and deploy
-	/// the current ship if that is the case.
-	/// </summary>
-	/// <remarks>
-	/// If the click is in the grid it deploys to the selected location
-	/// with the indicated direction
-	/// </remarks>
-	private static void DoDeployClick()
-	{
-		Point2D mouse = default(Point2D);
-
-		mouse = SwinGame.MousePosition();
-
-		//Calculate the row/col clicked
-		int row = 0;
-		int col = 0;
-		row = Convert.ToInt32(Math.Floor((mouse.Y - UtilityFunctions.FIELD_TOP) / (UtilityFunctions.CELL_HEIGHT + UtilityFunctions.CELL_GAP)));
-		col = Convert.ToInt32(Math.Floor((mouse.X - UtilityFunctions.FIELD_LEFT) / (UtilityFunctions.CELL_WIDTH + UtilityFunctions.CELL_GAP)));
-
-		if (row >= 0 & row < GameController.HumanPlayer.PlayerGrid.Height) {
-			if (col >= 0 & col < GameController.HumanPlayer.PlayerGrid.Width) {
-				//if in the area try to deploy
-				try {
-					GameController.HumanPlayer.PlayerGrid.MoveShip(row, col, _selectedShip, _currentDirection);
-				} catch (Exception ex) {
-					Audio.PlaySoundEffect(GameResources.GameSound("Error"));
-					UtilityFunctions.Message = ex.Message;
-				}
 			}
 		}
 	}
@@ -160,6 +169,7 @@ static class DeploymentController
 		}
 
 		SwinGame.DrawBitmap(GameResources.GameImage("RandomButton"), RANDOM_BUTTON_LEFT, TOP_BUTTONS_TOP);
+		SwinGame.DrawBitmap (GameResources.GameImage("MenuButton"), MENU_LEFT, MENU_TOP);
 
 		UtilityFunctions.DrawMessage();
 	}
