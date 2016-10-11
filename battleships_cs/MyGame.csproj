@@ -59,6 +59,7 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="src\" />
+    <Folder Include="src\UnitTests\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\DeploymentController.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="src\Model\ShipName.cs" />
     <Compile Include="src\Model\Tile.cs" />
     <Compile Include="src\Model\TileView.cs" />
+    <Compile Include="src\UnitTests\ResourcesTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">
@@ -94,6 +96,9 @@
     </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System" />
+    <Reference Include="nunit.framework">
+      <Package>nunit</Package>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <MacLibraryFiles Include="lib\sdl13\libSGSDK.dylib" />
