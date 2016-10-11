@@ -13,6 +13,11 @@ using SwinGameSDK;
 static class DiscoveryController
 {
 
+	private const int MENU_TOP = 0;
+	private const int MENU_LEFT = 0;
+	private const int MENU_HEIGHT = 62;
+	private const int MENU_WIDTH = 55;
+
 	/// <summary>
 	/// Handles input during the discovery phase of the game.
 	/// </summary>
@@ -22,8 +27,10 @@ static class DiscoveryController
 	/// </remarks>
 	public static void HandleDiscoveryInput()
 	{
-		if (SwinGame.KeyTyped(KeyCode.vk_ESCAPE)) {
-			GameController.AddNewState(GameState.ViewingGameMenu);
+		if (SwinGame.KeyTyped (KeyCode.vk_ESCAPE)) {
+			GameController.AddNewState (GameState.ViewingGameMenu);
+		} else if (SwinGame.MouseClicked (MouseButton.LeftButton) & UtilityFunctions.IsMouseInRectangle (MENU_LEFT, MENU_TOP, MENU_WIDTH, MENU_WIDTH)) {
+			GameController.AddNewState (GameState.ViewingGameMenu);
 		}
 
 		if (SwinGame.MouseClicked(MouseButton.LeftButton)) {
@@ -63,6 +70,7 @@ static class DiscoveryController
 		const int HITS_TOP = 206;
 		const int SPLASH_TOP = 256;
 
+
 		if ((SwinGame.KeyDown(KeyCode.vk_LSHIFT) | SwinGame.KeyDown(KeyCode.vk_RSHIFT)) & SwinGame.KeyDown(KeyCode.vk_c)) {
 			UtilityFunctions.DrawField(GameController.HumanPlayer.EnemyGrid, GameController.ComputerPlayer, true);
 		} else {
@@ -75,6 +83,7 @@ static class DiscoveryController
 		SwinGame.DrawText(GameController.HumanPlayer.Shots.ToString(), Color.White, GameResources.GameFont("Menu"), SCORES_LEFT, SHOTS_TOP);
 		SwinGame.DrawText(GameController.HumanPlayer.Hits.ToString(), Color.White, GameResources.GameFont("Menu"), SCORES_LEFT, HITS_TOP);
 		SwinGame.DrawText(GameController.HumanPlayer.Missed.ToString(), Color.White, GameResources.GameFont("Menu"), SCORES_LEFT, SPLASH_TOP);
+		SwinGame.DrawBitmap (GameResources.GameImage ("MenuButton"), MENU_LEFT, MENU_TOP);	
 	}
 
 }

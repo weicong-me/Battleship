@@ -13,6 +13,11 @@ using SwinGameSDK;
 /// </summary>
 static class DeploymentController
 {
+	private const int MENU_TOP = 0;
+	private const int MENU_LEFT = 0;
+	private const int MENU_HEIGHT = 62;
+	private const int MENU_WIDTH = 55;
+
 	private const int SHIPS_TOP = 98;
 	private const int SHIPS_LEFT = 20;
 	private const int SHIPS_HEIGHT = 90;
@@ -83,6 +88,9 @@ static class DeploymentController
 	{
 		if (SwinGame.KeyTyped(KeyCode.vk_ESCAPE)) {
 			GameController.AddNewState(GameState.ViewingGameMenu);
+		}
+		else if (SwinGame.MouseClicked (MouseButton.LeftButton) & UtilityFunctions.IsMouseInRectangle (MENU_LEFT, MENU_TOP, MENU_WIDTH, MENU_WIDTH)) {
+			GameController.AddNewState (GameState.ViewingGameMenu);
 		}
 
 		if (SwinGame.KeyTyped(KeyCode.vk_UP) | SwinGame.KeyTyped(KeyCode.vk_DOWN)) {
@@ -161,6 +169,7 @@ static class DeploymentController
 		}
 
 		SwinGame.DrawBitmap(GameResources.GameImage("RandomButton"), RANDOM_BUTTON_LEFT, TOP_BUTTONS_TOP);
+		SwinGame.DrawBitmap (GameResources.GameImage("MenuButton"), MENU_LEFT, MENU_TOP);
 
 		UtilityFunctions.DrawMessage();
 	}
