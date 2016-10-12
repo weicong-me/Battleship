@@ -1,20 +1,12 @@
 ﻿<Properties StartupItem="MyGame.csproj" StartupConfiguration="{871B5A90-103A-46A5-BBB9-07C02B9851D1}|Default">
-  <MonoDevelop.Ide.ItemProperties.MyGame PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/UnitTest/NUnitTest_AI.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/Model/BattleShipsGame.cs">
     <Files>
-      <File FileName="src/Model/BattleShipsGame.cs" Line="30" Column="16" NotebookId="1" />
-      <File FileName="src/Model/TileView.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="src/GameController.cs" Line="6" Column="21" NotebookId="1" />
+      <File FileName="src/Model/BattleShipsGame.cs" Line="8" Column="14" />
+      <File FileName="src/Model/TileView.cs" Line="1" Column="1" />
+      <File FileName="src/GameController.cs" Line="6" Column="21" />
     </Files>
-    <FloatingWindows>
-      <FloatingWindow WindowId="1" X="752" Y="869" Width="640" Height="480">
-        <Files>
-          <File FileName="src/UnitTest/NUnitTest_AI.cs" Line="19" Column="1" />
-        </Files>
-      </FloatingWindow>
-    </FloatingWindows>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Mac|x86" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Mac" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
