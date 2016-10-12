@@ -3,10 +3,11 @@ using System;
 namespace Application
 {
 	[TestFixture()]
-	public class NUnitTest_AI
+
+	public class NUnitTest_AI_Initialization_Medium
 	{
-		[Test()]
-		public void TestCase()
+		[Test ()]
+		public void TestCase ()
 		{
 			GameController.StartGame ();
 
@@ -24,7 +25,10 @@ namespace Application
 			AIOption expected__aiSetting_H = AIOption.Hard;
 			AIOption actual__aiSetting_H = GameController._aiSetting;
 			Assert.AreEqual (expected__aiSetting_H, actual__aiSetting_H);
+
 		}
 	}
+
+
 }
 

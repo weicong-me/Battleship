@@ -281,7 +281,7 @@ static class MenuController
 	/// The setup menu was clicked, perform the button's action.
 	/// </summary>
 	/// <param name="button">the button pressed</param>
-	private static void PerformSetupMenuAction(int button)
+	public static void PerformSetupMenuAction(int button)
 	{
 		switch (button) {
 			case SETUP_MENU_EASY_BUTTON:
