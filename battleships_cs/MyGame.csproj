@@ -88,7 +88,12 @@
     <Compile Include="src\Model\ShipName.cs" />
     <Compile Include="src\Model\Tile.cs" />
     <Compile Include="src\Model\TileView.cs" />
+<<<<<<< HEAD
     <Compile Include="src\UnitTests\ResourcesTests.cs" />
+=======
+    <Compile Include="src\UnitTests\NUnitTest_AI_PerformSetupMenuAction.cs" />
+    <Compile Include="src\UnitTests\NUnitTest_AI_Value_SetAndPass.cs" />
+>>>>>>> weicong-me-fix-AI-difficulties
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">
@@ -97,7 +102,11 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System" />
     <Reference Include="nunit.framework">
+<<<<<<< HEAD
       <Package>nunit</Package>
+=======
+      <HintPath>packages\NUnit.3.4.1\lib\net40\nunit.framework.dll</HintPath>
+>>>>>>> weicong-me-fix-AI-difficulties
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -185,5 +194,6 @@
     <None Include="Resources\sounds\sink.wav" />
     <None Include="Resources\sounds\watershot.wav" />
     <None Include="Resources\sounds\winner.wav" />
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

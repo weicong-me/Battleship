@@ -15,14 +15,14 @@ using SwinGameSDK;
 public static class GameController
 {
 
-	private static BattleShipsGame _theGame;
+	public static BattleShipsGame _theGame;
 	private static Player _human;
 
-	private static AIPlayer _ai;
+	public static AIPlayer _ai;
 
 	private static Stack<GameState> _state = new Stack<GameState>();
 
-	private static AIOption _aiSetting;
+	public static AIOption _aiSetting;
 	/// <summary>
 	/// Returns the current state of the game, indicating which screen is
 	/// currently being used
@@ -74,6 +74,7 @@ public static class GameController
 		//Create the game
 		_theGame = new BattleShipsGame();
 
+		Console.WriteLine ("AI-SETTING " + _aiSetting);
 		//create the players
 		switch (_aiSetting) {
 			case AIOption.Medium:
@@ -83,9 +84,10 @@ public static class GameController
 				_ai = new AIHardPlayer(_theGame);
 				break;
 			default:
-				_ai = new AIHardPlayer(_theGame);
+				_ai = new AIMediumPlayer (_theGame);
 				break;
 		}
+		Console.WriteLine ("AI - " + _ai);
 
 		_human = new Player(_theGame);
 
