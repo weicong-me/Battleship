@@ -60,6 +60,7 @@
   <ItemGroup>
     <Folder Include="src\" />
     <Folder Include="src\UnitTests\" />
+    <Folder Include="src\UnitTests\Model\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\DeploymentController.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="src\Model\Tile.cs" />
     <Compile Include="src\Model\TileView.cs" />
     <Compile Include="src\UnitTests\ResourcesTests.cs" />
+    <Compile Include="src\UnitTests\Model\TestShip.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">
@@ -97,7 +99,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System" />
     <Reference Include="nunit.framework">
-      <Package>nunit</Package>
+      <HintPath>packages\NUnit.3.5.0\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -185,5 +187,6 @@
     <None Include="Resources\sounds\sink.wav" />
     <None Include="Resources\sounds\watershot.wav" />
     <None Include="Resources\sounds\winner.wav" />
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

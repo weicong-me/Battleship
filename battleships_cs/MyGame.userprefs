@@ -1,8 +1,10 @@
 ﻿<Properties StartupItem="MyGame.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Unix|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/UnitTests/ResourcesTests.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Windows|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="src\UnitTests\Model\TestShip.cs">
     <Files>
-      <File FileName="src/UnitTests/ResourcesTests.cs" Line="25" Column="64" />
+      <File FileName="src\UnitTests\Model\TestShip.cs" Line="15" Column="3" />
+      <File FileName="src\DeploymentController.cs" Line="1" Column="1" />
+      <File FileName="src\UnitTests\ResourcesTests.cs" Line="1" Column="7" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
