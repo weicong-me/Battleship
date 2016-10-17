@@ -187,6 +187,5 @@
     <None Include="Resources\sounds\sink.wav" />
     <None Include="Resources\sounds\watershot.wav" />
     <None Include="Resources\sounds\winner.wav" />
-    <None Include="packages.config" />
   </ItemGroup>
 </Project>
