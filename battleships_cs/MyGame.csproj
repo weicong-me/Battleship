@@ -20,7 +20,12 @@
     <PlatformTarget>x86</PlatformTarget>
     <CustomCommands>
       <CustomCommands>
-        <Command type="AfterBuild" command="%SystemRoot%\Microsoft.NET\Framework\v4.0.30319\MsBuild.exe &quot;${ProjectDir}/${ProjectName}.csproj&quot; /target:CopyFiles /p:Configuration=Debug-Windows;Platform=x86;OutDir=&quot;${TargetDir}&quot;" workingdir="${ProjectDir}" externalConsole="True" />
+        <Command>
+          <type>AfterBuild</type>
+          <command>%SystemRoot%\Microsoft.NET\Framework\v4.0.30319\MsBuild.exe "${ProjectDir}/${ProjectName}.csproj" /target:CopyFiles /p:Configuration=Debug-Windows;Platform=x86;OutDir="${TargetDir}"</command>
+          <workingdir>${ProjectDir}</workingdir>
+          <externalConsole>True</externalConsole>
+        </Command>
       </CustomCommands>
     </CustomCommands>
   </PropertyGroup>
@@ -36,7 +41,10 @@
     <PlatformTarget>x86</PlatformTarget>
     <CustomCommands>
       <CustomCommands>
-        <Command type="AfterBuild" command="xbuild ${ProjectName}.csproj /target:CopyFiles" />
+        <Command>
+          <type>AfterBuild</type>
+          <command>xbuild ${ProjectName}.csproj /target:CopyFiles</command>
+        </Command>
       </CustomCommands>
     </CustomCommands>
   </PropertyGroup>
@@ -52,7 +60,10 @@
     <PlatformTarget>x86</PlatformTarget>
     <CustomCommands>
       <CustomCommands>
-        <Command type="AfterBuild" command="xbuild ${ProjectName}.csproj /target:CopyFiles" />
+        <Command>
+          <type>AfterBuild</type>
+          <command>xbuild ${ProjectName}.csproj /target:CopyFiles</command>
+        </Command>
       </CustomCommands>
     </CustomCommands>
   </PropertyGroup>
@@ -93,6 +104,7 @@
     <Compile Include="src\UnitTests\NUnitTest_AI_PerformSetupMenuAction.cs" />
     <Compile Include="src\UnitTests\NUnitTest_AI_Value_SetAndPass.cs" />
     <Compile Include="src\UnitTests\Model\TestShip.cs" />
+    <Compile Include="src\UnitTests\TestHits.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">
@@ -189,6 +201,5 @@
     <None Include="Resources\sounds\sink.wav" />
     <None Include="Resources\sounds\watershot.wav" />
     <None Include="Resources\sounds\winner.wav" />
-    <None Include="packages.config" />
   </ItemGroup>
 </Project>
