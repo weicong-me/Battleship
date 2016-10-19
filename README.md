@@ -16,9 +16,9 @@ To get started:
 
 ## If you get a black screen when running the game
 ### Linux/Windows users
-Build the project in Xamarin Studio so the project creates a "Debug" folder.
-Copy the "Resources" folder (from the root directory of the Git project) to "battleships_cs/bin/Debug/".
+* Build the project in Xamarin Studio so the project creates a "Debug" folder.
+* Copy the "Resources" folder (from the root directory of the Git project) to "battleships_cs/bin/Debug/".
 
 ### macOS users
-Build the project in Xamarin Studio so the project creates a "Debug/ProjectTemplate.app/Contents/" folder.
-Copy the "Resources" folder (from the root directory of the Git project) to "battleships_cs/bin/Debug/ProjectTemplate.app/Contents/"
+* Build the project in Xamarin Studio so the project creates a "Debug/ProjectTemplate.app/Contents/" folder.
+* Copy the "Resources" folder (from the root directory of the Git project) to "battleships_cs/bin/Debug/ProjectTemplate.app/Contents/"
